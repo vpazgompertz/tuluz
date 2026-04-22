@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Contenedor */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+/* Navegación */
+.nav {
+  display: flex;
+  gap: 25px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+/* Hover elegante */
+.nav a:hover {
+  color: #b08d57; /* dorado suave */
+}
