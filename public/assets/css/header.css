@@ -52,8 +52,7 @@ body {
 
 .logo img {
   display: block;
-  /* Controla la altura para que no deforme el header */
-  width: auto; /* Mantiene la proporción original */
+  width: auto;
   object-fit: contain;
 }
 

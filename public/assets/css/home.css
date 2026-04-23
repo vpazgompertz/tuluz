@@ -4,38 +4,84 @@ body {
 }
 
 /* HERO */
-.hero {
+.hero .swiper {
   height: 500px;
-  background-image: url("/assets/img/fondo.jpg");
-  background-color: #d1d49f;
+  position: relative;
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
+  transition: opacity 0.4s ease;
+}
+
+.swiper {
+  width: 100%;
+  height: 500px;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+  background: #000000; /* bullets normales */
+}
+
+.swiper-pagination-bullet-active {
+  background: #6e5023; /* tu color dorado */
+}
+
+.categories-menu {
   display: flex;
-  align-items: center;
   justify-content: center;
-
-  color: rgb(255, 255, 255);
-  text-align: center;
+  gap: 50px;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  background: white;
 }
 
-/* CONTENIDO */
-.hero-content {
+.menu-item {
   position: relative;
-  z-index: 1;
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
 }
 
-/* TEXTO */
-.hero h1 {
-  font-weight: 400;
-  letter-spacing: 6px;
+/* SUBMENÚ */
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  background: white;
+  padding: 15px;
+  min-width: 180px;
+
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
-.hero p {
-  font-size: 16px;
-  letter-spacing: 3px;
-  margin-top: 10px;
+/* links */
+.submenu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.submenu a:hover {
+  color: #b08d57;
+}
+
+/* HOVER (la magia) */
+.menu-item:hover .submenu {
+  display: flex;
 }
 
 /* BOTÓN */
@@ -81,9 +127,10 @@ body {
   width: 100%;
   border-radius: 10px;
   transition: 0.3s;
+  cursor: pointer;
 }
 
-/* HOVER (MUY IMPORTANTE) */
+/* HOVER */
 .card img:hover {
   transform: scale(1.03);
 }

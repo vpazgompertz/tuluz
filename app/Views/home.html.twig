@@ -5,15 +5,56 @@
 
 {% block content %}
 
-	<section class="hero">
-		<div class="hero-content">
-			<h1>TULUZ</h1>
-			<p>Accesorios hechos a mano</p>
+	<section
+		class="hero">
+
+		<!-- Slider main container -->
+		<div
+			class="swiper">
+			<!-- Additional required wrapper -->
+			<div
+				class="swiper-wrapper">
+				<!-- Slides -->
+				<div class="swiper-slide"><img src="/assets/img/hero/fondo1.jpg"></div>
+				<div class="swiper-slide"><img src="/assets/img/hero/fondo2.jpg"></div>
+				<div class="swiper-slide"><img src="/assets/img/hero/fondo3.jpg"></div>
+			</div>
+			<!-- If we need pagination -->
+			<div class="swiper-pagination"></div>
+
 		</div>
+
 	</section>
+	<nav class="categories-menu">
+
+		<div class="menu-item">
+			<span>Aros</span>
+			<div class="submenu">
+				<a href="#">Aros Miyuki</a>
+				<a href="#">Aros Arcilla polimérica</a>
+				<a href="#">Aros bordados</a>
+			</div>
+		</div>
+
+		<div class="menu-item">
+			<span>Pulseras</span>
+			<div class="submenu">
+				<a href="#">Pulseras gruesas</a>
+				<a href="#">Pulseras delgadas</a>
+			</div>
+		</div>
+
+		<div class="menu-item">
+			<span>Collares</span>
+			<div class="submenu">
+				<a href="#">Collares de piedra</a>
+				<a href="#">Chockers</a>
+			</div>
+		</div>
+
+	</nav>
 
 	<section id="productos" class="products">
-		<h1>MÁS BUSCADOS</h1>
 		<div class="grid">
 
 			<div class="card">
