@@ -6,8 +6,8 @@ body {
 /* Header */
 .header {
   width: 100%;
-  background-color: #ffffff;
-  border-bottom: 1px solid #eee;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(6px);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -15,37 +15,91 @@ body {
 
 /* Contenedor */
 .container {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
-  padding: 15px 20px;
+  padding: 10px 20px;
 
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
 }
 
 /* Logo */
 .logo {
-  font-size: 24px;
-  font-weight: 500;
-  letter-spacing: 2px;
+  justify-self: start;
+}
+
+.search {
+  justify-self: center;
+}
+
+.nav {
+  justify-self: end;
 }
 
 /* Navegación */
 .nav {
   display: flex;
-  gap: 25px;
+  gap: 20px;
 }
 
-.nav a {
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 5px;
+}
+
+.logo img {
+  display: block;
+  /* Controla la altura para que no deforme el header */
+  width: auto; /* Mantiene la proporción original */
+  object-fit: contain;
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+  .logo img {
+    max-height: 50px;
+  }
+}
+
+.nav i {
   text-decoration: none;
-  color: #333;
-  font-size: 14px;
-  letter-spacing: 1px;
+  color: #8b8b8b;
+  font-size: 16px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.nav i:hover {
+  color: #b08d57;
+}
+
+/* buscador */
+.search {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  border-bottom: 1px solid #ddd;
   transition: 0.3s;
 }
 
-/* Hover elegante */
-.nav a:hover {
-  color: #b08d57; /* dorado suave */
+.search:focus-within {
+  border-bottom: 1px solid #b08d57;
+}
+
+.search input {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 5px;
+  font-size: 15px;
+}
+
+.search button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
 }
