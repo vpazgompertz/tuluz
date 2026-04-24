@@ -1,0 +1,61 @@
+<div id="modalProducto" class="mp" role="dialog" aria-modal="true" aria-labelledby="mpNombre">
+	<div class="mp__box">
+		<div class="mp__content">
+
+			<div class="mp__img">
+				<img src="/assets/img/aros1.jpg" alt="aros1">
+			</div>
+
+			<div class="mp__body">
+				<button type="button" class="mp__cerrar" data-mp-cerrar aria-label="Cerrar">✕</button>
+
+				<div class="mp__cat">Anillos</div>
+				<h2 class="mp__nombre" id="mpNombre">Anillo Celeste</h2>
+				<div class="mp__precio">$89.990 CLP</div>
+
+				<div class="mp__divider"></div>
+
+				<p class="mp__desc">
+					Anillo de plata 925 con piedra de topacio azul, tallada a mano
+										cielo al amanecer.
+				</p>
+
+				<div class="mp__detalles">
+					<div class="mp__detalle">
+						<span class="mp__detalle-label">Material</span>
+						<span>Mostacillas miyuki</span>
+					</div>
+					<div class="mp__detalle">
+						<span class="mp__detalle-label">Tamaño</span>
+						<span>60mm</span>
+					</div>
+					<div class="mp__detalle">
+						<span class="mp__detalle-label">Peso</span>
+						<span>4.2 g</span>
+					</div>
+				</div>
+
+				<div class="mp__cantidad-wrap">
+					<span class="mp__cantidad-label">Cantidad</span>
+					<div class="mp__cantidad-ctrl">
+						<button type="button" data-mp-cant="-1" aria-label="Disminuir">−</button>
+						<input type="number" name="cantidad" value="1" min="1" max="99" aria-label="Cantidad">
+						<button type="button" data-mp-cant="1" aria-label="Aumentar">+</button>
+					</div>
+				</div>
+
+				<div class="mp__botones">
+					<button type="button" class="mp__btn mp__btn--primario" data-mp-accion="comprar">
+						Comprar ahora
+					</button>
+					<button type="button" class="mp__btn mp__btn--secundario" data-mp-accion="carro">
+						Añadir al carro
+					</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div class="mp-toast" id="mpToast" role="status" aria-live="polite"></div>
