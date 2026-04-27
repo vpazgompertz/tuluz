@@ -6,35 +6,44 @@
 {% block content %}
 
 	<section class="hero">
-		<div class="hero-content">
-			<h1>TULUZ</h1>
-			<p>Accesorios hechos a mano</p>
+
+		<div class="swiper">
+			<div class="swiper-wrapper">
+
+				<div class="swiper-slide"><img src="/assets/img/hero/fondo1.jpg"></div>
+				<div class="swiper-slide"><img src="/assets/img/hero/fondo2.jpg"></div>
+				<div class="swiper-slide"><img src="/assets/img/hero/fondo3.jpg"></div>
+			</div>
+
+			<div class="swiper-pagination"></div>
+
 		</div>
+
 	</section>
+	{% include 'partials/menu.html.twig' %}
 
 	<section id="productos" class="products">
-		<h1>MÁS BUSCADOS</h1>
 		<div class="grid">
 
-			<div class="card">
+			<div class="card" data-product-id="p1">
 				<img src="/assets/img/aros1.jpg" alt="Aros">
 				<h3>Aros Flor</h3>
 				<p>$25.000</p>
 			</div>
 
-			<div class="card">
+			<div class="card" data-product-id="p1">
 				<img src="/assets/img/aros2.jpg" alt="Aros">
 				<h3>Aros Minimal</h3>
 				<p>$30.000</p>
 			</div>
 
-			<div class="card">
+			<div class="card" data-product-id="p1">
 				<img src="/assets/img/collar.jpg" alt="Collar">
 				<h3>Collar Dorado</h3>
 				<p>$60.000</p>
 			</div>
 
-			<div class="card">
+			<div class="card" data-product-id="p1">
 				<img src="/assets/img/aros3.jpg" alt="Aros">
 				<h3>Aros Flor</h3>
 				<p>$25.000</p>
@@ -42,7 +51,7 @@
 
 		</div>
 
-		<a href="/productos" class="btn">Ver más</a>
+		<a href="/todos" class="btn">Ver todos</a>
 
 	</section>
 

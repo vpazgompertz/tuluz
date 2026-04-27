@@ -52,8 +52,7 @@ body {
 
 .logo img {
   display: block;
-  /* Controla la altura para que no deforme el header */
-  width: auto; /* Mantiene la proporción original */
+  width: auto;
   object-fit: contain;
 }
 
@@ -73,6 +72,19 @@ body {
 }
 
 .nav i:hover {
+  color: #b08d57;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #8b8b8b;
+  transition: 0.3s;
+}
+
+.icon-btn:hover {
   color: #b08d57;
 }
 

@@ -1,0 +1,95 @@
+.login {
+  min-height: 100vh; /* ocupa toda la pantalla */
+  display: flex;
+  align-items: center; /* centra vertical */
+  justify-content: center; /* centra horizontal */
+  background: #f8f8f8;
+}
+
+.login-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* CAJA */
+.login-box {
+  background: white;
+  padding: 50px 40px;
+  width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+}
+
+.login-box h2 {
+  margin-bottom: 30px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.login-container img {
+  display: block;
+  margin: 0 auto; /* 🔥 centra la imagen */
+  width: 120px;
+  height: auto;
+}
+
+/* INPUTS */
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 5px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+}
+
+.input-group label {
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  font-size: 13px;
+  color: #999;
+  transition: 0.3s;
+}
+
+/* animación label */
+.input-group input:focus + label,
+.input-group input:valid + label {
+  top: -10px;
+  font-size: 11px;
+  color: #b08d57;
+}
+
+/* BOTÓN */
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #8f9173;
+  background: none;
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.btn-login:hover {
+  background: #8f9173;
+  color: white;
+}
+
+/* TEXTO EXTRA */
+.login-extra {
+  margin-top: 20px;
+  font-size: 13px;
+}
+
+.login-extra a {
+  color: #b08d57;
+  text-decoration: none;
+}
