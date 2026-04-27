@@ -1,0 +1,44 @@
+{% extends 'layouts/auth.html.twig' %}
+
+{% block title %}Inicio - Tuluz
+{% endblock %}
+
+{% block content %}
+
+	<section class="login">
+
+		<div class="login-container">
+
+			<div class="login-box">
+				<a href="/">
+					<img src="/assets/img/logo.png" alt="TULUZ Logo" width="130" height="120">
+				</a>
+				<h2>Iniciar sesión</h2>
+
+				<form id="loginForm">
+
+					<div class="input-group">
+						<input type="email" id="email" required>
+						<label>Correo electrónico</label>
+					</div>
+
+					<div class="input-group">
+						<input type="password" id="password" required>
+						<label>Contraseña</label>
+					</div>
+
+					<button type="submit" class="btn-login">Ingresar</button>
+
+					<p class="login-extra">
+						¿No tienes cuenta?
+						<a href="/registro">Crear cuenta</a>
+					</p>
+
+				</form>
+
+			</div>
+
+		</div>
+
+	</section>
+{% endblock %}

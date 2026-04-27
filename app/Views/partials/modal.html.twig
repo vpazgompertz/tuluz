@@ -1,0 +1,83 @@
+<!-- ===== Aquí va el contenido del partial ===== -->
+
+<div id="modalProducto" class="mp" role="dialog" aria-modal="true">
+	<div class="mp__box">
+		<div class="mp__content">
+			<div class="mp__img">
+				<img src="/assets/img/aros3.jpg" alt="aros3">
+			</div>
+			<div class="mp__body">
+				<button type="button" class="mp__cerrar" data-mp-cerrar aria-label="Cerrar">✕</button>
+				<div class="mp__cat">Anillos</div>
+				<h2 class="mp__nombre">Anillo Celeste</h2>
+				<div class="mp__precio">$89.990 CLP</div>
+				<div class="mp__divider"></div>
+				<p class="mp__desc">Anillo de plata 925 con piedra de topacio azul, tallada a mano por artesanos locales. Una pieza que captura la serenidad del cielo al amanecer.</p>
+				<div class="mp__detalles">
+					<div class="mp__detalle">
+						<span class="mp__detalle-label">Material</span>
+						<span>Plata 925</span>
+					</div>
+					<div class="mp__detalle">
+						<span class="mp__detalle-label">Piedra</span>
+						<span>Topacio azul</span>
+					</div>
+					<div class="mp__detalle">
+						<span class="mp__detalle-label">Peso</span>
+						<span>4.2 g</span>
+					</div>
+				</div>
+				<div class="mp__cantidad-wrap">
+					<span class="mp__cantidad-label">Cantidad</span>
+					<div class="mp__cantidad-ctrl">
+						<button type="button" data-mp-cant="-1" aria-label="Disminuir">−</button>
+						<input type="number" name="cantidad" value="1" min="1" max="99" aria-label="Cantidad">
+						<button type="button" data-mp-cant="1" aria-label="Aumentar">+</button>
+					</div>
+				</div>
+				<div class="mp__botones">
+					<button type="button" class="mp__btn mp__btn--primario" data-mp-accion="comprar">Comprar ahora</button>
+					<button type="button" class="mp__btn mp__btn--secundario" data-mp-accion="carro">Añadir al carro</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="cd-overlay" id="carritoOverlay"></div>
+
+<aside id="carritoDrawer" class="cd" role="dialog" aria-modal="true">
+	<header class="cd__header">
+		<h2 class="cd__titulo">Tu carrito</h2>
+		<button type="button" class="cd__cerrar" data-cd-cerrar aria-label="Cerrar carrito">✕</button>
+	</header>
+
+	<div class="cd__items" id="cdItems"></div>
+
+	<footer class="cd__footer">
+		<div class="cd__resumen">
+			<div class="cd__linea">
+				<span>Subtotal</span>
+				<span id="cdSubtotal">$0</span>
+			</div>
+			<div class="cd__linea">
+				<span>Envío</span>
+				<span>Calculado al pagar</span>
+			</div>
+			<div class="cd__linea cd__linea--total">
+				<span>Total</span>
+				<span class="cd__total-precio" id="cdTotal">$0</span>
+			</div>
+		</div>
+		<div class="cd__botones">
+			<button type="button" class="cd__btn cd__btn--primario" data-cd-accion="comprar" data-cd-checkout>
+				Ir a pagar
+			</button>
+			<button type="button" class="cd__btn cd__btn--secundario" data-cd-accion="seguir">
+				Seguir comprando
+			</button>
+		</div>
+	</footer>
+</aside>
+
+<div class="mp-toast" id="mpToast" role="status" aria-live="polite"></div>
